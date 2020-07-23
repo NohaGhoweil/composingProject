@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+
+    <h1>Home</h1>
+    <p> <%= HomeStartingContent %> </p>
+
+
+ <%   ComposeContent.forEach(function(i){  %>
+        <h1> <%= i.textTitle %> </h1>
+         <p> 
+             <%= i.textBody.substring(0,100)+"..."; %>
+            <a href="/posts/<%=i.textTitle %>"  > Read More</a>
+         </p>
+        <%    });  %>
+   
+     
+    
+    
+<%- include("partials/footer"); -%>
